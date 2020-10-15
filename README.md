@@ -4,6 +4,40 @@ A extra light package to Websockets on Flutter/Getx to Android, iOS, Web, Window
 
 ## Getting Started
 
+### 1. Depend on it
+Add this to your package's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  getsocket: ^1.0.0
+```
+
+### 2. Install it
+
+You can install packages from the command line:
+
+with `pub`:
+
+```css
+$  pub get
+```
+
+with `Flutter`:
+
+```css
+$  flutter pub get
+```
+
+### 3. Import it
+
+Now in your `Dart` code, you can use: 
+
+````dart
+import 'package:getsocket/getsocket.dart';
+````
+
+## Usage
+
 Create a instance of GetSocket with the uri from your server. use http/https scheme
 Example:
 
