@@ -64,7 +64,7 @@ class SocketNotifier {
 
   void _tryOn(dynamic message) {
     try {
-      Map msg = jsonDecode(message);
+      Map<String, dynamic> msg = jsonDecode(message);
       final event = msg['type'];
       final data = msg['data'];
       if (_onEvents.containsKey(event)) {

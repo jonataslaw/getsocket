@@ -97,8 +97,8 @@ class BaseWebSocket {
     isDisposed = true;
   }
 
-  Future<void> emit(String event, dynamic data) async {
-    send({'type': event, 'data': data}.toString());
+  void emit(String event, dynamic data) {
+    send(jsonEncode({'type': event, 'data': data}));
   }
 
   Future<WebSocket> _connectForSelfSignedCert(url) async {

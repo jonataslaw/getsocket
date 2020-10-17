@@ -1,3 +1,6 @@
+## [1.0.1] 
+* Change `toString()` to `jsonEncode()` on `socket.emit()` to avoid errors
+
 ## [1.0.0] 
 * Stable release 
 * Breaking Changes:

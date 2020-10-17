@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html';
 
@@ -96,7 +97,7 @@ class BaseWebSocket {
   }
 
   void emit(String event, dynamic data) {
-    send({'type': event, 'data': data}.toString());
+    send(jsonEncode({'type': event, 'data': data}));
   }
 
   void dispose() {

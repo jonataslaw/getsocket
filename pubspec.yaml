@@ -1,6 +1,6 @@
 name: getsocket
 description: A extra light package to websocket on Flutter on Android, iOS, Web, Windows, Mac and Linux
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/jonataslaw/getsocket
 
 environment:
