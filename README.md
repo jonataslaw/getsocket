@@ -42,7 +42,7 @@ Create a instance of GetSocket with the uri from your server. use http/https sch
 Example:
 
 ```dart
-GetSocket socket = GetSocket("http://127.0.0.1:8080/socket"); // ow https to wss
+GetSocket socket = GetSocket("http://127.0.0.1:8080/socket"); // or https to wss
 ```
 Create events from opening, messages, close and error:
 
