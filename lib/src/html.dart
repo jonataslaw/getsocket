@@ -32,9 +32,11 @@ class BaseWebSocket {
       socket = WebSocket(url);
       socket.onOpen.listen((e) {
         socketNotifier?.open();
-        _t = Timer?.periodic(ping, (t) {
-          socket.send('');
-        });
+        if(null != ping){
+          _t = Timer?.periodic(ping, (t) {
+            socket?.send('');
+          });
+        }
         connectionStatus = ConnectionStatus.connected;
       });
 
@@ -81,7 +83,7 @@ class BaseWebSocket {
     socketNotifier.addEvents(event, message);
   }
 
-  void close([int status, String reason]) {
+  void close([int status = 1000, String reason]) {
     if (socket != null) socket.close(status, reason);
   }
 
